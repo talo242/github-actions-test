@@ -1,0 +1,16 @@
+name: Test
+
+on:
+  workflow_call:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@master
+
+      - name: yarn install & test
+        run: |
+          yarn install
+          yarn test
